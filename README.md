@@ -6,3 +6,15 @@ The project transforms raw and inconsistent transaction data into a clean analyt
 
 ---
 
+# 🎯 Project Objective
+
+Develop an end-to-end credit card fraud analytics solution to:
+
+- Detect and analyze fraudulent transactions.
+- Identify patterns associated with credit card fraud.
+- Monitor fraud frequency and transaction amounts.
+- Analyze fraud across transaction categories and segments.
+- Improve visibility into suspicious transaction behavior.
+- Support data-driven fraud monitoring and risk management decisions.
+
+---
