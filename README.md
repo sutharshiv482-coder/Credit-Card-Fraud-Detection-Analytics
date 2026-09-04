@@ -8,14 +8,15 @@ The project follows an end-to-end analytics workflow, starting from understandin
 
 # 🎯 Project Objective
 
-Develop an end-to-end credit card fraud analytics solution to:
+Develop an end-to-end fraud analytics solution to:
 
 - Detect and analyze fraudulent transactions.
-- Identify patterns associated with credit card fraud.
-- Monitor fraud frequency and transaction amounts.
-- Analyze fraud across transaction categories and segments.
-- Improve visibility into suspicious transaction behavior.
-- Support data-driven fraud monitoring and risk management decisions.
+- Identify high-risk transaction patterns.
+- Measure fraud rate and financial exposure.
+- Analyze fraud across merchant categories and transaction attributes.
+- Create a risk-scoring approach for prioritizing suspicious transactions.
+- Build an interactive dashboard for fraud monitoring.
+- Generate actionable insights for fraud prevention.
 
 ---
 
