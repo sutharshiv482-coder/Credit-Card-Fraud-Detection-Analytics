@@ -22,16 +22,8 @@ Develop an end-to-end fraud analytics solution to:
 
 # 💼 Business Value
 
-Credit card fraud can result in significant financial losses, customer dissatisfaction, and increased operational costs. Large transaction datasets can also contain missing values, duplicates, inconsistent labels, and invalid amounts that can reduce the reliability of fraud analysis.
+Credit card fraud can cause financial losses, operational costs, and customer dissatisfaction. A reliable fraud analytics process helps organizations identify suspicious transaction patterns and prioritize high-risk activity.
 
-This project provides a structured analytics solution to:
-
-- 🔍 Identify fraudulent transaction patterns.
-- 💰 Quantify transaction and fraud amounts.
-- 📊 Monitor fraud-related KPIs.
-- 🏷️ Analyze fraud across transaction categories.
-- 🧹 Improve transaction data quality.
-- ⚠️ Identify suspicious transaction segments.
-- 📈 Support better fraud monitoring and investigation.
+This project demonstrates how raw transaction data can be transformed into actionable fraud intelligence using **Pandas, SQL, risk scoring, and Power BI**.
 
 ---
