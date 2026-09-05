@@ -27,3 +27,7 @@ Credit card fraud can cause financial losses, operational costs, and customer di
 This project demonstrates how raw transaction data can be transformed into actionable fraud intelligence using **Pandas, SQL, risk scoring, and Power BI**.
 
 ---
+
+# ❓ Business Questions
+
+- What is the overall fraud rate?
