@@ -31,3 +31,20 @@ This project demonstrates how raw transaction data can be transformed into actio
 # ❓ Business Questions
 
 - What is the overall fraud rate?
+
+---
+
+# 🔄 Project Workflow
+
+The project follows a structured **end-to-end Data Analyst workflow**:
+
+```text
+1. Understand Business Problem
+          ↓
+2. Inspect Raw Dataset
+          ↓
+3. Perform Data Quality Audit
+          ↓
+4. Clean Data using Pandas
+          ↓
+5. Validate Cleaned Data
