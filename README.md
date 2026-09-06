@@ -56,3 +56,40 @@ The project follows a structured **end-to-end Data Analyst workflow**:
 # 1️⃣ Understand Business Problem
 
 - Define the credit card fraud detection objective.
+
+---
+
+# 2️⃣ Inspect Raw Dataset
+
+The raw transaction dataset was inspected using **Pandas** to understand its structure and identify potential data-quality problems.
+
+Activities included:
+
+- Loading the dataset.
+- Checking dataset dimensions.
+- Inspecting column names.
+- Reviewing data types.
+- Examining categorical values.
+- Checking transaction attributes.
+- Reviewing fraud/class labels.
+
+---
+
+# 3️⃣ Perform Data Quality Audit
+
+The raw dataset contained several real-world data-quality issues.
+
+| # | Data Quality Issue | Approx. Count |
+|---|--------------------|---------------|
+| 1 | Missing values | 5–8% across 7 columns |
+| 2 | Duplicate rows | 50 exact duplicates |
+| 3 | Impossible transaction amounts | 30 rows |
+| 4 | Inconsistent fraud/class labels | 40 rows |
+| 5 | Inconsistent merchant categories | 50 rows |
+| 6 | Inconsistent entry-mode values | 40 rows |
+| 7 | Invalid transaction time values | 20 rows |
+| 8 | Whitespace in transaction IDs | 25 rows |
+| 9 | `is_foreign` stored as inconsistent strings | 35 rows |
+| 10 | Completely blank columns | `notes`, `reviewed_by` |
+
+---
