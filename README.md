@@ -31,6 +31,7 @@ This project demonstrates how raw transaction data can be transformed into actio
 # ❓ Business Questions
 
 - What is the overall fraud rate?
+- How many fraudulent transactions are present?
 
 ---
 
