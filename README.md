@@ -49,3 +49,10 @@ The project follows a structured **end-to-end Data Analyst workflow**:
 4. Clean Data using Pandas
           ↓
 5. Validate Cleaned Data
+```
+
+---
+
+# 1️⃣ Understand Business Problem
+
+- Define the credit card fraud detection objective.
