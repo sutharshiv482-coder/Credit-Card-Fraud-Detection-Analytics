@@ -138,3 +138,64 @@ Validation included:
 > ✅ **Validation ensures the cleaned dataset is reliable and ready for fraud-pattern analysis.**
 
 ---
+
+# 6️⃣ Explore Fraud Patterns
+
+Exploratory analysis was performed using **Pandas** to understand fraudulent transaction behavior and identify patterns that may indicate higher fraud risk.
+
+Analysis included:
+
+- Comparing fraud vs non-fraud transactions.
+- Calculating the overall fraud rate.
+- Analyzing fraud by merchant category.
+- Analyzing fraud by entry mode.
+- Comparing transaction amounts between fraud and non-fraud transactions.
+- Analyzing foreign vs domestic transaction fraud.
+- Identifying high-value fraudulent transactions.
+- Examining transaction-level fraud patterns.
+- Comparing fraud patterns across customer and transaction characteristics.
+
+> 🔍 **The objective was to identify where, when, and under which transaction conditions fraud occurs most frequently.**
+
+---
+
+# 7️⃣ Write SQL Business Queries
+
+---
+
+# 8️⃣ Define KPIs
+
+---
+
+# 9️⃣ Create Risk Scoring Logic
+
+---
+
+# 🔟 Build Dashboard
+
+---
+
+# 📊 Dashboard Preview
+
+![Credit Card Fraud Detection Analytics Dashboard](YOUR_DASHBOARD_IMAGE_URL)
+
+---
+
+# ⚙️ Dashboard Features
+
+
+---
+
+# 1️⃣1️⃣ Generate Business Insights
+
+The analysis converts transaction-level data into business-focused insights.
+
+Key areas include:
+
+- > **2.23% is relatively low as a transaction-level fraud rate, but it does not mean the fraud problem is insignificant.**  
+> The next step is to examine the **fraud amount**, because 2.23% of transactions could represent a much larger percentage of the **total money transacted**.
+
+
+> **The goal is not only to identify fraud, but to understand where and why fraud risk is concentrated.**
+
+---
