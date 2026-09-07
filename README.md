@@ -116,3 +116,25 @@ Key activities:
 > 🧹 **Clean data is the foundation of reliable fraud analysis.**
 
 ---
+
+# 5️⃣ Validate Cleaned Data
+
+After cleaning, the dataset was validated using **Pandas** to ensure the transformation process did not introduce new data-quality issues.
+
+Validation included:
+
+- Rechecking missing values.
+- Confirming duplicate removal.
+- Validating `amount_inr` values.
+- Checking `Class` fraud-label consistency.
+- Checking `merchant_category` consistency.
+- Validating `entry_mode` values.
+- Checking `time_seconds` within the valid range of **0–86,400 seconds**.
+- Confirming correct data types.
+- Verifying `transaction_id` formatting.
+- Checking `is_foreign` values for consistency.
+- Performing final data-quality checks.
+
+> ✅ **Validation ensures the cleaned dataset is reliable and ready for fraud-pattern analysis.**
+
+---
