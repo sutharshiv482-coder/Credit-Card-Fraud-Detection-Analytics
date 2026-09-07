@@ -93,3 +93,26 @@ The raw dataset contained several real-world data-quality issues.
 | 10 | Completely blank columns | `notes`, `reviewed_by` |
 
 ---
+
+# 4️⃣ Clean Data using Pandas
+
+Data cleaning was performed using **Python and Pandas**.
+
+Key activities:
+
+- Handled missing values.
+- Removed exact duplicate records.
+- Standardized `Class` fraud labels.
+- Standardized merchant categories.
+- Standardized entry-mode values.
+- Corrected invalid `amount_inr` values.
+- Validated `time_seconds` values within the valid range of **0–86,400 seconds**.
+- Trimmed whitespace from `transaction_id`.
+- Converted `is_foreign` values into a consistent Boolean format.
+- Corrected data types.
+- Removed completely blank columns: `notes` and `reviewed_by`.
+- Prepared the cleaned dataset for SQL analysis and dashboard development.
+
+> 🧹 **Clean data is the foundation of reliable fraud analysis.**
+
+---
