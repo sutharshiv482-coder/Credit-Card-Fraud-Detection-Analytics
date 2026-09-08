@@ -141,21 +141,18 @@ Validation included:
 
 # 6️⃣ Explore Fraud Patterns
 
-Exploratory analysis was performed using **Pandas** to understand fraudulent transaction behavior and identify patterns that may indicate higher fraud risk.
+Exploratory analysis was performed to understand fraudulent transaction behavior.
 
 Analysis included:
 
-- Comparing fraud vs non-fraud transactions.
-- Calculating the overall fraud rate.
-- Analyzing fraud by merchant category.
-- Analyzing fraud by entry mode.
-- Comparing transaction amounts between fraud and non-fraud transactions.
-- Analyzing foreign vs domestic transaction fraud.
-- Identifying high-value fraudulent transactions.
-- Examining transaction-level fraud patterns.
-- Comparing fraud patterns across customer and transaction characteristics.
-
-> 🔍 **The objective was to identify where, when, and under which transaction conditions fraud occurs most frequently.**
+- Fraud vs non-fraud transactions.
+- Fraud rate analysis.
+- Merchant-category fraud analysis.
+- Entry-mode fraud analysis.
+- Transaction amount analysis.
+- Foreign vs domestic transaction analysis.
+- High-value fraudulent transactions.
+- Transaction-level fraud patterns.
 
 ---
 
