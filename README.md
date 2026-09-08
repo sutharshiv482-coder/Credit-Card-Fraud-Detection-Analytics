@@ -192,10 +192,5 @@ The analysis converts transaction-level data into business-focused insights.
 
 Key areas include:
 
-- > **2.23% is relatively low as a transaction-level fraud rate, but it does not mean the fraud problem is insignificant.**  
-> The next step is to examine the **fraud amount**, because 2.23% of transactions could represent a much larger percentage of the **total money transacted**.
-
-
-> **The goal is not only to identify fraud, but to understand where and why fraud risk is concentrated.**
 
 ---
