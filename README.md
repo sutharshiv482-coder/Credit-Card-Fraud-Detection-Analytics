@@ -49,6 +49,20 @@ The project follows a structured **end-to-end Data Analyst workflow**:
 4. Clean Data using Pandas
           ↓
 5. Validate Cleaned Data
+          ↓
+6. Explore Fraud Patterns
+          ↓
+7. Write SQL Business Queries
+          ↓
+8. Define KPIs
+          ↓
+9. Create Risk Scoring Logic
+          ↓
+10. Build Dashboard
+          ↓
+11. Generate Business Insights
+          ↓
+12. Recommend Actions
 ```
 
 ---
