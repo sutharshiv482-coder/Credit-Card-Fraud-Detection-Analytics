@@ -56,6 +56,10 @@ The project follows a structured **end-to-end Data Analyst workflow**:
 # 1️⃣ Understand Business Problem
 
 - Define the credit card fraud detection objective.
+- Identify potential financial and operational risks.
+- Understand transaction-level fraud requirements.
+- Convert business requirements into analytical questions.
+- Determine the KPIs required for fraud monitoring.
 
 ---
 
