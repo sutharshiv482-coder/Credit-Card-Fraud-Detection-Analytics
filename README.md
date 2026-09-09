@@ -176,7 +176,58 @@ Analysis included:
 
 # 7️⃣ Write SQL Business Queries
 
----
+SQL was used to answer business-focused questions using the cleaned
+credit card transaction dataset.
+
+### Business Questions
+
+1. How many transactions were processed?
+2. How many transactions were fraudulent?
+3. What is the overall fraud rate?
+4. What is the total transaction amount?
+5. How much transaction value was associated with fraud?
+6. What is the average transaction amount?
+7. Which merchant categories have the highest fraud rate?
+8. Which card types have the highest fraud rate?
+9. Which fraudulent transactions have high monetary value?
+10. Which transaction segments represent higher fraud risk?
+
+### SQL Analysis Areas
+
+- Total transaction count.
+- Fraudulent transaction count.
+- Fraud rate.
+- Total transaction amount.
+- Fraudulent transaction amount.
+- Average transaction amount.
+- Fraud rate by merchant category.
+- Fraud rate by card type.
+- High-value fraudulent transactions.
+- High-risk transaction segments.
+
+### Business Outcome
+
+SQL analysis transformed the cleaned transaction data into
+business-focused metrics that helped identify fraud patterns,
+high-risk transaction segments, and financially significant
+fraudulent transactions.
+
+The analysis revealed:
+
+- **9,974** total transactions were processed.
+- **222** transactions were identified as fraudulent.
+- The overall fraud rate was **2.23%**.
+- Total transaction value was **₹59,583,339.97**.
+- Fraudulent transaction value was **₹4,181,956.90**.
+- The average transaction amount was **₹5,973.87**.
+- **ATM Withdrawal** had the highest merchant-category fraud rate at **7.38%**.
+- **Online Shopping** had the second-highest fraud rate at **6.39%**.
+- **Electronics** had a fraud rate of **4.59%**.
+- **Amex** had the highest card-type fraud rate at **3.02%**.
+- The highest-value fraudulent transaction was **₹3,413,796.72**.
+- High-value fraudulent transactions can create a disproportionately large financial impact compared with the overall fraud rate.
+
+These SQL outputs were used as inputs for **KPI definition, risk scoring, dashboard development, fraud pattern analysis, and business recommendations**.
 
 # 8️⃣ Define KPIs
 
