@@ -231,6 +231,17 @@ These SQL outputs were used as inputs for **KPI definition, risk scoring, dashbo
 
 # 8️⃣ Define KPIs
 
+## 📌 Key Performance Indicators
+
+- 💳 **Total Transactions**
+- 🚨 **Total Fraudulent Transactions**
+- 📉 **Fraud Rate (%)**
+- 💰 **Total Transaction Amount**
+- ⚠️ **Fraudulent Transaction Amount**
+- 📊 **Average Transaction Amount**
+
+These KPIs provide a high-level view of transaction activity and fraud exposure.
+
 ---
 
 # 9️⃣ Create Risk Scoring Logic
