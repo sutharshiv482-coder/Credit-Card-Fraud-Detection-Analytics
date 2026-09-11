@@ -32,6 +32,15 @@ This project demonstrates how raw transaction data can be transformed into actio
 
 - What is the overall fraud rate?
 - How many fraudulent transactions are present?
+- What is the total value of fraudulent transactions?
+- Which merchant categories have the highest fraud rate?
+- Which transaction types have higher fraud activity?
+- Which transaction amount ranges contain more fraudulent transactions?
+- Are fraudulent transactions concentrated in specific categories?
+- Are duplicate transactions present?
+- What data-quality issues exist in the raw dataset?
+- Which transactions should be considered high risk?
+- Which transaction segments require additional fraud monitoring?
 
 ---
 
