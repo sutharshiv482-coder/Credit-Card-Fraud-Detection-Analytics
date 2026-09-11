@@ -255,6 +255,29 @@ These KPIs provide a high-level view of transaction activity and fraud exposure.
 
 # 9️⃣ Create Risk Scoring Logic
 
+A rule-based **transaction risk scoring approach** was developed to prioritize suspicious transactions.
+
+Potential risk factors include:
+
+- 💰 Transaction amount
+- 🏷️ Merchant category
+- 💳 Entry mode
+- 🌍 Foreign transaction indicator
+- 🚨 Historical fraud-related patterns
+- 📊 Other available transaction attributes
+
+Transactions can then be grouped into risk levels such as:
+
+```text
+Low Risk
+   ↓
+Medium Risk
+   ↓
+High Risk
+```
+
+The purpose of the risk score is to help prioritize transactions for further investigation rather than automatically classify every transaction as fraudulent.
+
 ---
 
 # 🔟 Build Dashboard
