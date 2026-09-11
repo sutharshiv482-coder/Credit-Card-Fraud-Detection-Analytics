@@ -292,6 +292,17 @@ The purpose of the risk score is to help prioritize transactions for further inv
 
 # ⚙️ Dashboard Features
 
+- 💳 **KPI Cards** – Monitor total transactions, fraud transactions, fraud rate, transaction amount, and fraud amount.
+- 🚨 **Fraud Analysis** – Analyze fraudulent transaction activity.
+- 📉 **Fraud Rate Analysis** – Compare fraud rates across different transaction segments.
+- 🏷️ **Merchant Category Analysis** – Identify categories with higher fraud activity.
+- 💰 **Transaction Amount Analysis** – Analyze transaction-value patterns.
+- 🔄 **Fraud vs Non-Fraud Comparison** – Compare transaction behavior between fraud classes.
+- 📊 **Transaction Trend Analysis** – Monitor transaction and fraud activity over time.
+- ⚠️ **Risk Analysis** – Identify transaction segments requiring additional investigation.
+- 🎛️ **Interactive Filters** – Dynamically filter dashboard analysis.
+- 🔍 **Transaction Segmentation** – Analyze fraud patterns across available transaction attributes.
+- 💡 **Business Insights** – Present analytical findings in a business-friendly format.
 
 ---
 
