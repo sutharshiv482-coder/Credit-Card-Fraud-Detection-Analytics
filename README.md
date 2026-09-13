@@ -318,3 +318,14 @@ Key areas include:
 # 1️⃣2️⃣ Recommend Actions
 
 ---
+
+# 🛠️ Technology Stack
+
+| Tool | Purpose |
+|------|---------|
+| **Python (Pandas)** | Data cleaning, preprocessing, validation, and analysis |
+| **SQL** | Business analysis and KPI calculations |
+| **Power BI** | Interactive dashboard development and visualization |
+| **Jupyter Notebook** | Data exploration and analytical workflow |
+
+---
