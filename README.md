@@ -292,17 +292,17 @@ The purpose of the risk score is to help prioritize transactions for further inv
 
 # ⚙️ Dashboard Features
 
-- 💳 **KPI Cards** – Monitor total transactions, fraud transactions, fraud rate, transaction amount, and fraud amount.
-- 🚨 **Fraud Analysis** – Analyze fraudulent transaction activity.
-- 📉 **Fraud Rate Analysis** – Compare fraud rates across different transaction segments.
-- 🏷️ **Merchant Category Analysis** – Identify categories with higher fraud activity.
-- 💰 **Transaction Amount Analysis** – Analyze transaction-value patterns.
-- 🔄 **Fraud vs Non-Fraud Comparison** – Compare transaction behavior between fraud classes.
-- 📊 **Transaction Trend Analysis** – Monitor transaction and fraud activity over time.
-- ⚠️ **Risk Analysis** – Identify transaction segments requiring additional investigation.
-- 🎛️ **Interactive Filters** – Dynamically filter dashboard analysis.
-- 🔍 **Transaction Segmentation** – Analyze fraud patterns across available transaction attributes.
-- 💡 **Business Insights** – Present analytical findings in a business-friendly format.
+- 💳 **KPI Cards** – Monitor total transactions, fraudulent transactions, fraud rate, total transaction amount, and fraud amount.
+- 🚨 **Fraud Analysis** – Analyze fraudulent transaction activity and identify major fraud patterns.
+- 📉 **Fraud Rate Analysis** – Compare fraud rates across merchant categories, customer age groups, and card types.
+- 🏷️ **Merchant Category Analysis** – Identify merchant categories with higher fraud rates.
+- 💰 **Fraud Amount Analysis** – Analyze fraud amount distribution across different card types.
+- 🔄 **Fraud vs Non-Fraud Comparison** – Compare transaction volume and transaction amount between genuine and fraudulent transactions.
+- 👥 **Customer Segment Analysis** – Analyze fraud rates across different customer age groups.
+- 💳 **Card Type Analysis** – Compare fraud rates and fraud amounts across different card types.
+- ⚠️ **High-Risk Segment Analysis** – Identify transaction segments with higher fraud rates and financial exposure.
+- 🎛️ **Interactive Filters** – Dynamically filter dashboard analysis by card type, merchant category, customer age group, city tier, and foreign transaction.
+- 💡 **Business Insights** – Present key fraud patterns, risk areas, and actionable findings in a business-friendly format.
 
 ---
 
