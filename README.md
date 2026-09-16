@@ -286,7 +286,7 @@ The purpose of the risk score is to help prioritize transactions for further inv
 
 # 📊 Dashboard Preview
 
-![Credit Card Fraud Detection Analytics Dashboard]([YOUR_DASHBOARD_IMAGE_URL](https://github.com/sutharshiv482-coder/Credit-Card-Fraud-Detection-Analytics/blob/main/Power%20BI%20Desktop%2014-09-2026%2022_12_39.png))
+![Credit Card Fraud Detection Analytics Dashboard](https://github.com/sutharshiv482-coder/Credit-Card-Fraud-Detection-Analytics/blob/main/Power%20BI%20Desktop%2014-09-2026%2022_12_39.png)
 
 ---
 
@@ -308,14 +308,56 @@ The purpose of the risk score is to help prioritize transactions for further inv
 
 # 1️⃣1️⃣ Generate Business Insights
 
-The analysis converts transaction-level data into business-focused insights.
+The analysis converts transaction-level data into actionable business insights by identifying where fraud is concentrated, which customer and transaction segments carry higher risk, and where financial exposure is greatest.
 
-Key areas include:
+### Key Business Insights
 
+- **Fraud rate is approximately 2.22%**, with **222 fraudulent transactions** identified out of 9,994 total transactions.
+- **Fraudulent transactions represent approximately ₹4.18M**, indicating significant financial exposure despite the relatively low transaction-level fraud rate.
+- **ATM withdrawals have the highest fraud rate at 7.38%**, making them a key segment for enhanced monitoring.
+- **Online shopping has a 6.39% fraud rate**, indicating elevated risk in digital transactions.
+- **Electronics has a 4.59% fraud rate**, making it another high-risk merchant category.
+- **RuPay accounts for the highest fraud amount**, indicating greater financial exposure within this card type.
+- The **60+ customer age group shows the highest fraud rate**, followed by the 46–60 age group.
+- **High-value fraudulent transactions require additional attention** because a relatively small number of transactions can create substantial financial losses.
+- Fraud patterns vary across **merchant categories, card types, customer age groups, and transaction segments**, highlighting the need for segment-specific monitoring.
+
+### Business Implications
+
+These findings suggest that fraud prevention should focus on **high-risk merchant categories, digital transactions, high-value transactions, and customer segments with elevated fraud rates** rather than relying only on the overall fraud rate.
+
+> **The goal is not only to detect fraudulent transactions, but to identify where fraud risk and financial exposure are concentrated so that monitoring and prevention efforts can be targeted effectively.**
 
 ---
 
 # 1️⃣2️⃣ Recommend Actions
+
+Based on the identified fraud patterns and high-risk segments, the following actions can help reduce fraud exposure and strengthen transaction monitoring.
+
+### Recommended Business Actions
+
+- **Strengthen monitoring for ATM withdrawals** due to their high fraud rate.
+- **Apply enhanced monitoring to online shopping transactions** where fraud risk is elevated.
+- **Implement additional verification for high-value transactions** to reduce potential financial losses.
+- **Monitor high-risk merchant categories**, particularly ATM withdrawal and electronics transactions.
+- **Review fraud exposure across card types**, especially where fraud amounts are comparatively high.
+- **Introduce segment-based fraud rules** using customer age group, merchant category, card type, transaction amount, and foreign transaction status.
+- **Use risk-based transaction alerts** to prioritize suspicious transactions for manual review.
+- **Regularly monitor fraud KPIs** such as fraud rate, fraud amount, high-value fraud, and fraud rate by merchant category.
+- **Improve data-quality controls** to ensure missing, inconsistent, or incorrect values do not affect fraud detection and reporting.
+- **Continuously update fraud detection rules** as new transaction patterns and fraud behaviors emerge.
+
+### Expected Business Impact
+
+These actions can help financial institutions:
+
+- Reduce fraudulent transaction losses.
+- Improve early detection of suspicious activity.
+- Prioritize investigation resources toward higher-risk transactions.
+- Strengthen transaction monitoring and fraud prevention.
+- Support more data-driven risk management decisions.
+
+> **The recommended approach is to combine risk-based monitoring, transaction-level controls, and continuous analysis of emerging fraud patterns.**
 
 ---
 
@@ -327,5 +369,27 @@ Key areas include:
 | **SQL** | Business analysis and KPI calculations |
 | **Power BI** | Interactive dashboard development and visualization |
 | **Jupyter Notebook** | Data exploration and analytical workflow |
+
+---
+
+# 🧠 Skills Demonstrated
+
+- Data Cleaning & Preprocessing
+- Data Quality Auditing
+- Data Validation
+- Exploratory Data Analysis
+- Python
+- Pandas
+- SQL
+- Fraud Analytics
+- Transaction Analysis
+- Risk Scoring
+- KPI Development
+- Power BI
+- Dashboard Development
+- Data Visualization
+- Business Intelligence
+- Financial Risk Analysis
+- Business Problem Solving
 
 ---
