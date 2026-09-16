@@ -286,7 +286,7 @@ The purpose of the risk score is to help prioritize transactions for further inv
 
 # 📊 Dashboard Preview
 
-![Credit Card Fraud Detection Analytics Dashboard](YOUR_DASHBOARD_IMAGE_URL)
+![Credit Card Fraud Detection Analytics Dashboard]([YOUR_DASHBOARD_IMAGE_URL](https://github.com/sutharshiv482-coder/Credit-Card-Fraud-Detection-Analytics/blob/main/Power%20BI%20Desktop%2014-09-2026%2022_12_39.png))
 
 ---
 
