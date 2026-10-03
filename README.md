@@ -2,45 +2,68 @@
 
 An interactive **Credit Card Fraud Detection Analytics Dashboard** built using **Python (Pandas), SQL, and Power BI** to analyze transaction patterns, identify fraudulent activity, evaluate transaction risk, and support data-driven fraud monitoring decisions.
 
-The project follows an end-to-end analytics workflow, starting from understanding the business problem and auditing raw transaction data to cleaning, validation, SQL analysis, risk scoring, dashboard development, business insights, and recommendations.
+This project follows an end-to-end **Data Analyst workflow**, from understanding the business problem and auditing raw transaction data to data cleaning, validation, SQL analysis, risk scoring, dashboard development, business insights, and recommendations.
 
 ---
 
-# 🎯 Project Objective
+## 🎯 Project Objective
 
-Develop an end-to-end fraud analytics solution to:
+The objective of this project is to develop an end-to-end fraud analytics solution to:
 
-- Detect and analyze fraudulent transactions.
-- Identify high-risk transaction patterns.
-- Measure fraud rate and financial exposure.
-- Analyze fraud across merchant categories and transaction attributes.
-- Create a risk-scoring approach for prioritizing suspicious transactions.
-- Build an interactive dashboard for fraud monitoring.
-- Generate actionable insights for fraud prevention.
-
----
-
-# 💼 Business Value
-
-Credit card fraud can cause financial losses, operational costs, and customer dissatisfaction. A reliable fraud analytics process helps organizations identify suspicious transaction patterns and prioritize high-risk activity.
-
-This project demonstrates how raw transaction data can be transformed into actionable fraud intelligence using **Pandas, SQL, risk scoring, and Power BI**.
+* Detect and analyze fraudulent transactions.
+* Identify high-risk transaction patterns.
+* Measure fraud rate and financial exposure.
+* Analyze fraud across merchant categories and transaction attributes.
+* Apply a risk-scoring approach to prioritize suspicious transactions.
+* Build an interactive dashboard for fraud monitoring.
+* Generate actionable insights for fraud prevention and monitoring.
 
 ---
 
-# ❓ Business Questions
+## 💼 Business Problem
 
-- What is the overall fraud rate?
-- How many fraudulent transactions are present?
-- What is the total value of fraudulent transactions?
-- Which merchant categories have the highest fraud rate?
-- Which transaction types have higher fraud activity?
-- Which transaction amount ranges contain more fraudulent transactions?
-- Are fraudulent transactions concentrated in specific categories?
-- Are duplicate transactions present?
-- What data-quality issues exist in the raw dataset?
-- Which transactions should be considered high risk?
-- Which transaction segments require additional fraud monitoring?
+Credit card fraud can result in financial losses, operational costs, and customer dissatisfaction.
+
+Fraud monitoring teams need to understand:
+
+* Where fraudulent transactions are concentrated.
+* Which transaction segments have higher fraud rates.
+* How much financial exposure is associated with fraudulent activity.
+* Which transactions may require additional investigation.
+* Which transaction attributes can help prioritize suspicious activity.
+
+This project transforms raw transaction data into structured fraud analytics using **Pandas, SQL, risk scoring, and Power BI**.
+
+---
+
+## 💡 Business Value
+
+The analysis provides a structured approach to:
+
+* Monitor fraudulent transaction activity.
+* Quantify fraud rate and financial exposure.
+* Identify high-risk merchant and transaction segments.
+* Prioritize suspicious transactions for further investigation.
+* Compare fraud patterns across transaction attributes.
+* Support data-driven fraud monitoring decisions.
+
+> **The focus is not only on identifying fraudulent transactions, but also on understanding where fraud risk and financial exposure are concentrated.**
+
+---
+
+## ❓ Business Questions
+
+1. What is the overall fraud rate?
+2. How many fraudulent transactions are present?
+3. What is the total value of fraudulent transactions?
+4. Which merchant categories have the highest fraud rate?
+5. Which transaction types have higher fraud activity?
+6. Which transaction amount ranges contain more fraudulent transactions?
+7. Are fraudulent transactions concentrated in specific categories?
+8. Are duplicate transactions present?
+9. What data-quality issues exist in the raw dataset?
+10. Which transactions should be considered high risk?
+11. Which transaction segments require additional fraud monitoring?
 
 ---
 
@@ -61,13 +84,13 @@ The project follows a structured **end-to-end Data Analyst workflow**:
           ↓
 6. Explore Fraud Patterns
           ↓
-7. Write SQL Business Queries
+7. Perform SQL Business Analysis
           ↓
 8. Define KPIs
           ↓
 9. Create Risk Scoring Logic
           ↓
-10. Build Dashboard
+10. Build Power BI Dashboard
           ↓
 11. Generate Business Insights
           ↓
@@ -78,27 +101,33 @@ The project follows a structured **end-to-end Data Analyst workflow**:
 
 # 1️⃣ Understand Business Problem
 
-- Define the credit card fraud detection objective.
-- Identify potential financial and operational risks.
-- Understand transaction-level fraud requirements.
-- Convert business requirements into analytical questions.
-- Determine the KPIs required for fraud monitoring.
+The first step was to translate the fraud-monitoring requirement into analytical questions.
+
+Key objectives included:
+
+* Define the credit card fraud detection objective.
+* Identify potential financial and operational risks.
+* Understand transaction-level fraud requirements.
+* Translate business requirements into analytical questions.
+* Determine the KPIs required for fraud monitoring.
+* Identify transaction segments that may require additional monitoring.
 
 ---
 
 # 2️⃣ Inspect Raw Dataset
 
-The raw transaction dataset was inspected using **Pandas** to understand its structure and identify potential data-quality problems.
+The raw transaction dataset was inspected using **Python (Pandas)** to understand its structure and identify potential data-quality issues.
 
 Activities included:
 
-- Loading the dataset.
-- Checking dataset dimensions.
-- Inspecting column names.
-- Reviewing data types.
-- Examining categorical values.
-- Checking transaction attributes.
-- Reviewing fraud/class labels.
+* Loading the dataset.
+* Checking dataset dimensions.
+* Inspecting column names.
+* Reviewing data types.
+* Examining categorical values.
+* Reviewing transaction attributes.
+* Reviewing fraud/class labels.
+* Checking the structure of transaction identifiers.
 
 ---
 
@@ -106,39 +135,39 @@ Activities included:
 
 The raw dataset contained several real-world data-quality issues.
 
-| # | Data Quality Issue | Approx. Count |
-|---|--------------------|---------------|
-| 1 | Missing values | 5–8% across 7 columns |
-| 2 | Duplicate rows | 50 exact duplicates |
-| 3 | Impossible transaction amounts | 30 rows |
-| 4 | Inconsistent fraud/class labels | 40 rows |
-| 5 | Inconsistent merchant categories | 50 rows |
-| 6 | Inconsistent entry-mode values | 40 rows |
-| 7 | Invalid transaction time values | 20 rows |
-| 8 | Whitespace in transaction IDs | 25 rows |
-| 9 | `is_foreign` stored as inconsistent strings | 35 rows |
-| 10 | Completely blank columns | `notes`, `reviewed_by` |
+| #  | Data Quality Issue                          | Approx. Count          |
+| -- | ------------------------------------------- | ---------------------- |
+| 1  | Missing values                              | 5–8% across 7 columns  |
+| 2  | Duplicate rows                              | 50 exact duplicates    |
+| 3  | Impossible transaction amounts              | 30 rows                |
+| 4  | Inconsistent fraud/class labels             | 40 rows                |
+| 5  | Inconsistent merchant categories            | 50 rows                |
+| 6  | Inconsistent entry-mode values              | 40 rows                |
+| 7  | Invalid transaction time values             | 20 rows                |
+| 8  | Whitespace in transaction IDs               | 25 rows                |
+| 9  | `is_foreign` stored as inconsistent strings | 35 rows                |
+| 10 | Completely blank columns                    | `notes`, `reviewed_by` |
 
 ---
 
 # 4️⃣ Clean Data using Pandas
 
-Data cleaning was performed using **Python and Pandas**.
+Data cleaning and preprocessing were performed using **Python (Pandas)**.
 
-Key activities:
+Key activities included:
 
-- Handled missing values.
-- Removed exact duplicate records.
-- Standardized `Class` fraud labels.
-- Standardized merchant categories.
-- Standardized entry-mode values.
-- Corrected invalid `amount_inr` values.
-- Validated `time_seconds` values within the valid range of **0–86,400 seconds**.
-- Trimmed whitespace from `transaction_id`.
-- Converted `is_foreign` values into a consistent Boolean format.
-- Corrected data types.
-- Removed completely blank columns: `notes` and `reviewed_by`.
-- Prepared the cleaned dataset for SQL analysis and dashboard development.
+* Handling missing values.
+* Removing exact duplicate records.
+* Standardizing `Class` fraud labels.
+* Standardizing merchant categories.
+* Standardizing entry-mode values.
+* Correcting invalid `amount_inr` values.
+* Validating `time_seconds` values within the valid range of **0–86,400 seconds**.
+* Trimming whitespace from `transaction_id`.
+* Converting `is_foreign` values into a consistent Boolean format.
+* Correcting data types.
+* Removing completely blank columns: `notes` and `reviewed_by`.
+* Preparing the cleaned dataset for SQL analysis and Power BI dashboard development.
 
 > 🧹 **Clean data is the foundation of reliable fraud analysis.**
 
@@ -146,21 +175,21 @@ Key activities:
 
 # 5️⃣ Validate Cleaned Data
 
-After cleaning, the dataset was validated using **Pandas** to ensure the transformation process did not introduce new data-quality issues.
+After cleaning, the dataset was validated using **Pandas** to ensure that the transformation process did not introduce new data-quality issues.
 
 Validation included:
 
-- Rechecking missing values.
-- Confirming duplicate removal.
-- Validating `amount_inr` values.
-- Checking `Class` fraud-label consistency.
-- Checking `merchant_category` consistency.
-- Validating `entry_mode` values.
-- Checking `time_seconds` within the valid range of **0–86,400 seconds**.
-- Confirming correct data types.
-- Verifying `transaction_id` formatting.
-- Checking `is_foreign` values for consistency.
-- Performing final data-quality checks.
+* Rechecking missing values.
+* Confirming duplicate removal.
+* Validating `amount_inr` values.
+* Checking `Class` fraud-label consistency.
+* Checking `merchant_category` consistency.
+* Validating `entry_mode` values.
+* Checking `time_seconds` within the valid range of **0–86,400 seconds**.
+* Confirming correct data types.
+* Verifying `transaction_id` formatting.
+* Checking `is_foreign` values for consistency.
+* Performing final data-quality checks.
 
 > ✅ **Validation ensures the cleaned dataset is reliable and ready for fraud-pattern analysis.**
 
@@ -172,23 +201,22 @@ Exploratory analysis was performed to understand fraudulent transaction behavior
 
 Analysis included:
 
-- Fraud vs non-fraud transactions.
-- Fraud rate analysis.
-- Merchant-category fraud analysis.
-- Entry-mode fraud analysis.
-- Transaction amount analysis.
-- Foreign vs domestic transaction analysis.
-- High-value fraudulent transactions.
-- Transaction-level fraud patterns.
+* Fraud vs non-fraud transactions.
+* Overall fraud rate.
+* Fraud rate by merchant category.
+* Fraud rate by entry mode.
+* Transaction amount analysis.
+* Foreign vs domestic transaction analysis.
+* High-value fraudulent transactions.
+* Transaction-level fraud patterns.
 
 ---
 
-# 7️⃣ Write SQL Business Queries
+# 7️⃣ Perform SQL Business Analysis
 
-SQL was used to answer business-focused questions using the cleaned
-credit card transaction dataset.
+SQL was used to perform business-focused analysis on the cleaned credit card transaction dataset.
 
-### Business Questions
+## Business Questions
 
 1. How many transactions were processed?
 2. How many transactions were fraudulent?
@@ -201,53 +229,62 @@ credit card transaction dataset.
 9. Which fraudulent transactions have high monetary value?
 10. Which transaction segments represent higher fraud risk?
 
-### SQL Analysis Areas
+## SQL Analysis Areas
 
-- Total transaction count.
-- Fraudulent transaction count.
-- Fraud rate.
-- Total transaction amount.
-- Fraudulent transaction amount.
-- Average transaction amount.
-- Fraud rate by merchant category.
-- Fraud rate by card type.
-- High-value fraudulent transactions.
-- High-risk transaction segments.
+* Total transaction count.
+* Fraudulent transaction count.
+* Fraud rate.
+* Total transaction amount.
+* Fraudulent transaction amount.
+* Average transaction amount.
+* Fraud rate by merchant category.
+* Fraud rate by card type.
+* High-value fraudulent transactions.
+* High-risk transaction segments.
 
-### Business Outcome
+## Key SQL Results
 
-SQL analysis transformed the cleaned transaction data into
-business-focused metrics that helped identify fraud patterns,
-high-risk transaction segments, and financially significant
-fraudulent transactions.
+| Metric                                      |                      Result |
+| ------------------------------------------- | --------------------------: |
+| Total Transactions                          |                   **9,974** |
+| Fraudulent Transactions                     |                     **222** |
+| Fraud Rate                                  |                   **2.22%** |
+| Total Transaction Value                     |          **₹59,583,339.97** |
+| Fraudulent Transaction Value                |           **₹4,181,956.90** |
+| Average Transaction Amount                  |               **₹5,973.87** |
+| Highest Merchant-Category Fraud Rate        |  **ATM Withdrawal — 7.38%** |
+| Second-Highest Merchant-Category Fraud Rate | **Online Shopping — 6.39%** |
+| Electronics Fraud Rate                      |                   **4.59%** |
+| Highest Card-Type Fraud Rate                |            **Amex — 3.02%** |
+| Highest-Value Fraudulent Transaction        |           **₹3,413,796.72** |
 
-The analysis revealed:
+### Key Findings
 
-- **9,974** total transactions were processed.
-- **222** transactions were identified as fraudulent.
-- The overall fraud rate was **2.23%**.
-- Total transaction value was **₹59,583,339.97**.
-- Fraudulent transaction value was **₹4,181,956.90**.
-- The average transaction amount was **₹5,973.87**.
-- **ATM Withdrawal** had the highest merchant-category fraud rate at **7.38%**.
-- **Online Shopping** had the second-highest fraud rate at **6.39%**.
-- **Electronics** had a fraud rate of **4.59%**.
-- **Amex** had the highest card-type fraud rate at **3.02%**.
-- The highest-value fraudulent transaction was **₹3,413,796.72**.
-- High-value fraudulent transactions can create a disproportionately large financial impact compared with the overall fraud rate.
+* **222 fraudulent transactions** were identified out of **9,974 transactions**.
+* The overall fraud rate was approximately **2.22%**.
+* Total transaction value was approximately **₹59.58M**.
+* Fraudulent transaction value was approximately **₹4.18M**.
+* **ATM Withdrawal** had the highest merchant-category fraud rate at **7.38%**.
+* **Online Shopping** had the second-highest fraud rate at **6.39%**.
+* **Electronics** had a fraud rate of **4.59%**.
+* **Amex** had the highest card-type fraud rate at **3.02%**.
+* The highest-value fraudulent transaction was **₹3,413,796.72**.
+* High-value fraudulent transactions can create substantial financial exposure even when the overall fraud rate is relatively low.
 
-These SQL outputs were used as inputs for **KPI definition, risk scoring, dashboard development, fraud pattern analysis, and business recommendations**.
+---
 
 # 8️⃣ Define KPIs
 
 ## 📌 Key Performance Indicators
 
-- 💳 **Total Transactions**
-- 🚨 **Total Fraudulent Transactions**
-- 📉 **Fraud Rate (%)**
-- 💰 **Total Transaction Amount**
-- ⚠️ **Fraudulent Transaction Amount**
-- 📊 **Average Transaction Amount**
+| KPI                                  | Purpose                                                                |
+| ------------------------------------ | ---------------------------------------------------------------------- |
+| 💳 **Total Transactions**            | Measures overall transaction volume                                    |
+| 🚨 **Fraudulent Transactions**       | Measures identified fraudulent transaction count                       |
+| 📉 **Fraud Rate (%)**                | Measures fraudulent transactions as a percentage of total transactions |
+| 💰 **Total Transaction Amount**      | Measures total transaction value                                       |
+| ⚠️ **Fraudulent Transaction Amount** | Measures financial value associated with fraudulent transactions       |
+| 📊 **Average Transaction Amount**    | Measures average transaction value                                     |
 
 These KPIs provide a high-level view of transaction activity and fraud exposure.
 
@@ -255,176 +292,275 @@ These KPIs provide a high-level view of transaction activity and fraud exposure.
 
 # 9️⃣ Create Risk Scoring Logic
 
-A rule-based **transaction risk scoring approach** was developed to prioritize suspicious transactions.
+A rule-based **transaction risk-scoring approach** was developed to help prioritize suspicious transactions for further review.
 
 Potential risk factors include:
 
-- 💰 Transaction amount
-- 🏷️ Merchant category
-- 💳 Entry mode
-- 🌍 Foreign transaction indicator
-- 🚨 Historical fraud-related patterns
-- 📊 Other available transaction attributes
+* 💰 Transaction amount.
+* 🏷️ Merchant category.
+* 💳 Entry mode.
+* 🌍 Foreign transaction indicator.
+* 🚨 Historical fraud-related patterns.
+* 📊 Other available transaction attributes.
 
-Transactions can then be grouped into risk levels such as:
+Transactions can be grouped into:
 
 ```text
 Low Risk
-   ↓
+    ↓
 Medium Risk
-   ↓
+    ↓
 High Risk
 ```
 
-The purpose of the risk score is to help prioritize transactions for further investigation rather than automatically classify every transaction as fraudulent.
+The purpose of the risk score is to **prioritize transactions for investigation**, not to automatically classify every transaction as fraudulent.
+
+> **Risk scoring should be treated as an analytical prioritization mechanism rather than a production fraud-detection model.**
 
 ---
 
-# 🔟 Build Dashboard
+# 🔟 Build Power BI Dashboard
+
+The cleaned transaction data, SQL analysis, KPIs, and risk-related analysis were used to build an interactive **Power BI fraud analytics dashboard**.
 
 ---
 
 # 📊 Dashboard Preview
 
-![Credit Card Fraud Detection Analytics Dashboard](https://github.com/sutharshiv482-coder/Credit-Card-Fraud-Detection-Analytics/blob/main/Power%20BI%20Desktop%2014-09-2026%2022_12_39.png)
+[Credit Card Fraud Detection Analytics Dashboard](https://github.com/sutharshiv482-coder/Credit-Card-Fraud-Detection-Analytics/blob/main/Power%20BI%20Desktop%2014-09-2026%2022_12_39.png)
 
 ---
 
 # ⚙️ Dashboard Features
 
-- 💳 **KPI Cards** – Monitor total transactions, fraudulent transactions, fraud rate, total transaction amount, and fraud amount.
-- 🚨 **Fraud Analysis** – Analyze fraudulent transaction activity and identify major fraud patterns.
-- 📉 **Fraud Rate Analysis** – Compare fraud rates across merchant categories, customer age groups, and card types.
-- 🏷️ **Merchant Category Analysis** – Identify merchant categories with higher fraud rates.
-- 💰 **Fraud Amount Analysis** – Analyze fraud amount distribution across different card types.
-- 🔄 **Fraud vs Non-Fraud Comparison** – Compare transaction volume and transaction amount between genuine and fraudulent transactions.
-- 👥 **Customer Segment Analysis** – Analyze fraud rates across different customer age groups.
-- 💳 **Card Type Analysis** – Compare fraud rates and fraud amounts across different card types.
-- ⚠️ **High-Risk Segment Analysis** – Identify transaction segments with higher fraud rates and financial exposure.
-- 🎛️ **Interactive Filters** – Dynamically filter dashboard analysis by card type, merchant category, customer age group, city tier, and foreign transaction.
-- 💡 **Business Insights** – Present key fraud patterns, risk areas, and actionable findings in a business-friendly format.
+### 💳 KPI Cards
+
+Monitor:
+
+* Total transactions.
+* Fraudulent transactions.
+* Fraud rate.
+* Total transaction amount.
+* Fraudulent transaction amount.
+
+### 🚨 Fraud Analysis
+
+Analyze fraudulent transaction activity and identify major fraud patterns.
+
+### 📉 Fraud Rate Analysis
+
+Compare fraud rates across:
+
+* Merchant categories.
+* Customer age groups.
+* Card types.
+
+### 🏷️ Merchant Category Analysis
+
+Identify merchant categories with comparatively higher fraud rates.
+
+### 💰 Fraud Amount Analysis
+
+Analyze fraudulent transaction value across different card types and transaction segments.
+
+### 🔄 Fraud vs Non-Fraud Comparison
+
+Compare transaction volume and transaction value between genuine and fraudulent transactions.
+
+### 👥 Customer Age Analysis
+
+Analyze fraud rates across different customer age groups.
+
+### 💳 Card Type Analysis
+
+Compare fraud rates and fraud amounts across different card types.
+
+### ⚠️ High-Risk Segment Analysis
+
+Identify transaction segments with higher fraud rates and financial exposure.
+
+### 🎛️ Interactive Filters
+
+The dashboard supports filtering by:
+
+* Card type.
+* Merchant category.
+* Customer age group.
+* City tier.
+* Foreign transaction status.
+
+### 💡 Business Insights
+
+Present key fraud patterns, risk areas, and actionable findings in a business-friendly format.
 
 ---
 
 # 1️⃣1️⃣ Generate Business Insights
 
-The analysis converts transaction-level data into actionable business insights by identifying where fraud is concentrated, which customer and transaction segments carry higher risk, and where financial exposure is greatest.
+The analysis converts transaction-level data into business insights by identifying where fraud is concentrated, which segments have elevated risk, and where financial exposure is greatest.
 
-### Key Business Insights
+## Key Business Insights
 
-- **Fraud rate is approximately 2.22%**, with **222 fraudulent transactions** identified out of 9,994 total transactions.
-- **Fraudulent transactions represent approximately ₹4.18M**, indicating significant financial exposure despite the relatively low transaction-level fraud rate.
-- **ATM withdrawals have the highest fraud rate at 7.38%**, making them a key segment for enhanced monitoring.
-- **Online shopping has a 6.39% fraud rate**, indicating elevated risk in digital transactions.
-- **Electronics has a 4.59% fraud rate**, making it another high-risk merchant category.
-- **RuPay accounts for the highest fraud amount**, indicating greater financial exposure within this card type.
-- The **60+ customer age group shows the highest fraud rate**, followed by the 46–60 age group.
-- **High-value fraudulent transactions require additional attention** because a relatively small number of transactions can create substantial financial losses.
-- Fraud patterns vary across **merchant categories, card types, customer age groups, and transaction segments**, highlighting the need for segment-specific monitoring.
+### 🚨 Overall Fraud Activity
 
-### Business Implications
+**222 fraudulent transactions** were identified out of **9,974 total transactions**, resulting in an overall fraud rate of approximately **2.22%**.
 
-These findings suggest that fraud prevention should focus on **high-risk merchant categories, digital transactions, high-value transactions, and customer segments with elevated fraud rates** rather than relying only on the overall fraud rate.
+### 💰 Financial Exposure
 
-> **The goal is not only to detect fraudulent transactions, but to identify where fraud risk and financial exposure are concentrated so that monitoring and prevention efforts can be targeted effectively.**
+Fraudulent transactions represented approximately **₹4.18M** in transaction value.
+
+### 🏧 ATM Withdrawal Risk
+
+**ATM Withdrawal** had the highest merchant-category fraud rate at **7.38%**, making it an important segment for enhanced monitoring.
+
+### 🛒 Online Shopping Risk
+
+**Online Shopping** had a fraud rate of **6.39%**, indicating elevated fraud activity within this transaction category.
+
+### 📱 Electronics Risk
+
+**Electronics** had a fraud rate of **4.59%**, making it another category requiring attention.
+
+### 💳 Card-Type Exposure
+
+**Amex** had the highest card-type fraud rate at **3.02%**.
+
+**RuPay** accounted for the highest fraud amount, indicating comparatively higher financial exposure within this card type.
+
+### 👥 Customer Age Groups
+
+The **60+ customer age group** showed the highest fraud rate, followed by the **46–60** age group.
+
+### 💸 High-Value Fraud
+
+The highest-value fraudulent transaction was **₹3,413,796.72**.
+
+High-value fraudulent transactions require particular attention because a relatively small number of transactions can create substantial financial exposure.
+
+### 📊 Segment-Level Risk
+
+Fraud patterns vary across merchant categories, card types, customer age groups, and transaction attributes.
+
+This supports segment-based fraud monitoring rather than relying only on the overall fraud rate.
+
+> **The goal is not only to identify fraudulent transactions, but to understand where fraud risk and financial exposure are concentrated so that monitoring efforts can be targeted effectively.**
 
 ---
 
 # 1️⃣2️⃣ Recommend Actions
 
-Based on the identified fraud patterns and high-risk segments, the following actions can help reduce fraud exposure and strengthen transaction monitoring.
+Based on the identified fraud patterns and high-risk segments:
 
-### Recommended Business Actions
+### 🏧 Strengthen ATM Monitoring
 
-- **Strengthen monitoring for ATM withdrawals** due to their high fraud rate.
-- **Apply enhanced monitoring to online shopping transactions** where fraud risk is elevated.
-- **Implement additional verification for high-value transactions** to reduce potential financial losses.
-- **Monitor high-risk merchant categories**, particularly ATM withdrawal and electronics transactions.
-- **Review fraud exposure across card types**, especially where fraud amounts are comparatively high.
-- **Introduce segment-based fraud rules** using customer age group, merchant category, card type, transaction amount, and foreign transaction status.
-- **Use risk-based transaction alerts** to prioritize suspicious transactions for manual review.
-- **Regularly monitor fraud KPIs** such as fraud rate, fraud amount, high-value fraud, and fraud rate by merchant category.
-- **Improve data-quality controls** to ensure missing, inconsistent, or incorrect values do not affect fraud detection and reporting.
-- **Continuously update fraud detection rules** as new transaction patterns and fraud behaviors emerge.
+Increase monitoring attention for ATM withdrawals because this category has the highest identified fraud rate.
 
-### Expected Business Impact
+### 🛒 Monitor Online Shopping Transactions
 
-These actions can help financial institutions:
+Apply enhanced monitoring to online shopping transactions due to their elevated fraud rate.
 
-- Reduce fraudulent transaction losses.
-- Improve early detection of suspicious activity.
-- Prioritize investigation resources toward higher-risk transactions.
-- Strengthen transaction monitoring and fraud prevention.
-- Support more data-driven risk management decisions.
+### 💰 Review High-Value Transactions
 
-> **The recommended approach is to combine risk-based monitoring, transaction-level controls, and continuous analysis of emerging fraud patterns.**
+Apply additional verification or review to unusually high-value transactions because of their potential financial exposure.
+
+### 🏷️ Monitor High-Risk Merchant Categories
+
+Prioritize monitoring of merchant categories with comparatively higher fraud rates, particularly ATM Withdrawal and Electronics.
+
+### 💳 Review Card-Type Exposure
+
+Monitor fraud rate and fraud amount across card types to identify areas with higher transaction risk or financial exposure.
+
+### 👥 Apply Segment-Based Monitoring
+
+Use customer age group, merchant category, card type, transaction amount, and foreign transaction status as analytical dimensions when reviewing suspicious activity.
+
+### ⚠️ Prioritize Risk-Based Alerts
+
+Use the risk-scoring approach to prioritize transactions for manual investigation rather than treating every transaction equally.
+
+### 📊 Monitor Fraud KPIs
+
+Regularly monitor:
+
+* Fraud rate.
+* Fraudulent transaction count.
+* Fraudulent transaction amount.
+* High-value fraudulent transactions.
+* Fraud rate by merchant category.
+* Fraud rate by card type.
+
+### 🧹 Maintain Data-Quality Controls
+
+Continue monitoring missing, inconsistent, duplicate, and invalid transaction data because data-quality problems can affect fraud reporting and analysis.
+
+> **The recommended approach is to combine risk-based monitoring, transaction-level analysis, and continuous review of emerging fraud patterns.**
 
 ---
 
 # 🛠️ Technology Stack
 
-| Tool | Purpose |
-|------|---------|
-| **Python (Pandas)** | Data cleaning, preprocessing, validation, and analysis |
-| **SQL** | Business analysis and KPI calculations |
-| **Power BI** | Interactive dashboard development and visualization |
-| **Jupyter Notebook** | Data exploration and analytical workflow |
+| Tool                 | Purpose                                                            |
+| -------------------- | ------------------------------------------------------------------ |
+| **Python (Pandas)**  | Data cleaning, preprocessing, validation, and exploratory analysis |
+| **SQL**              | Business analysis, fraud metrics, and KPI calculations             |
+| **Power BI**         | Interactive dashboard development and visualization                |
+| **Jupyter Notebook** | Data exploration and analytical workflow                           |
 
 ---
 
 # 🧠 Skills Demonstrated
 
-- Data Cleaning & Preprocessing
-- Data Quality Auditing
-- Data Validation
-- Exploratory Data Analysis
-- Python
-- Pandas
-- SQL
-- Fraud Analytics
-- Transaction Analysis
-- Risk Scoring
-- KPI Development
-- Power BI
-- Dashboard Development
-- Data Visualization
-- Business Intelligence
-- Financial Risk Analysis
-- Business Problem Solving
+* Data Cleaning & Preprocessing
+* Data Quality Auditing
+* Data Validation
+* Exploratory Data Analysis
+* Python
+* Pandas
+* SQL
+* Fraud Analytics
+* Transaction Analysis
+* Risk Scoring
+* KPI Development
+* Power BI
+* Dashboard Development
+* Data Visualization
+* Business Intelligence
+* Financial Risk Analysis
+* Business Problem Solving
 
 ---
 
 # 📈 Business Impact
 
-The Credit Card Fraud Detection Analytics Dashboard transforms transaction-level data into actionable insights that help financial teams monitor fraud risk, understand financial exposure, and prioritize investigation efforts.
+This project demonstrates how transaction-level data can be transformed into structured fraud intelligence for monitoring and decision support.
 
-### Key Business Benefits
+The analytics solution helps teams:
 
-- 🚨 Improve visibility into fraudulent transaction activity.
-- 💰 Quantify financial exposure from fraudulent transactions.
-- 📊 Monitor key fraud-related KPIs in one dashboard.
-- 🔍 Identify suspicious transaction patterns and high-risk segments.
-- 🏷️ Detect merchant categories with elevated fraud rates.
-- ⚠️ Prioritize high-risk and high-value transactions for investigation.
-- 🎯 Support risk-based transaction monitoring and fraud prevention.
-- 🧹 Improve data-quality awareness for more reliable fraud analysis.
-- 📈 Support data-driven fraud monitoring and risk management decisions.
-- ⚡ Help investigation teams focus resources on transactions with greater potential financial exposure.
+* 🚨 Monitor fraudulent transaction activity.
+* 💰 Quantify financial exposure associated with fraud.
+* 📊 Track key fraud-monitoring KPIs.
+* 🔍 Identify high-risk transaction patterns.
+* 🏷️ Detect merchant categories with elevated fraud rates.
+* ⚠️ Prioritize high-risk and high-value transactions for investigation.
+* 🎯 Support risk-based transaction monitoring.
+* 🧹 Improve awareness of data-quality issues affecting fraud analysis.
+* 📈 Support data-driven fraud-management decisions.
 
-> **Business Value:** The dashboard helps move fraud analysis from simply identifying fraudulent transactions to understanding **where fraud risk is concentrated, how much financial exposure it creates, and where monitoring efforts should be focused.**
+> **Business Value:** The dashboard moves fraud analysis beyond simply counting fraudulent transactions by showing **where fraud risk is concentrated, how much financial exposure it represents, and which areas should receive greater monitoring attention.**
 
 ---
 
 # 🚀 Project Outcome
 
-Successfully transformed a **raw and inconsistent credit card transaction dataset** into a structured analytics solution using **Pandas, SQL, risk scoring, and Power BI**.
+The project transformed a **raw and inconsistent credit card transaction dataset** into an end-to-end fraud analytics solution using **Pandas, SQL, risk scoring, and Power BI**.
 
-The project demonstrates a complete real-world Data Analyst workflow:
+The completed workflow demonstrates:
 
 ```text
 Business Problem
       ↓
-Raw Data
+Raw Transaction Data
       ↓
 Data Quality Audit
       ↓
@@ -447,7 +583,7 @@ Business Insights
 Business Recommendations
 ```
 
-The final solution provides a practical framework for understanding transaction fraud, monitoring risk, and supporting data-driven fraud-management decisions.
+The final solution provides a structured framework for analyzing transaction fraud, identifying high-risk segments, evaluating financial exposure, and supporting data-driven fraud monitoring decisions.
 
 ---
 
@@ -457,4 +593,4 @@ The final solution provides a practical framework for understanding transaction 
 
 ---
 
-⭐ **If you found this project useful, consider giving it a Star ⭐ on GitHub!**
+⭐ **If you found this project useful, consider giving it a Star on GitHub!**
