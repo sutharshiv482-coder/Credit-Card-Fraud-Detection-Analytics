@@ -327,7 +327,7 @@ The cleaned transaction data, SQL analysis, KPIs, and risk-related analysis were
 
 # 📊 Dashboard Preview
 
-[Credit Card Fraud Detection Analytics Dashboard](https://github.com/sutharshiv482-coder/Credit-Card-Fraud-Detection-Analytics/blob/main/Power%20BI%20Desktop%2014-09-2026%2022_12_39.png)
+![Credit Card Fraud Detection Analytics Dashboard](https://github.com/sutharshiv482-coder/Credit-Card-Fraud-Detection-Analytics/blob/main/Power%20BI%20Desktop%2014-09-2026%2022_12_39.png)
 
 ---
 
